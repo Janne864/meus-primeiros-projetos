@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 60px; background-color: #f8f9fa; color: #333;">
+
+    <h1>🧮 Calculadora de Gorjetas</h1>
+    <p>Insira os valores abaixo para calcular:</p>
+
+    <!-- Campo 1: Valor total da conta -->
+    <div style="margin-bottom: 15px;">
+        <label>Valor da Conta (R$):</label><br>
+        <input type="number" id="valor-conta" placeholder="Ex: 100" style="padding: 8px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; width: 200px;">
+    </div>
+
+    <!-- Campo 2: Porcentagem da gorjeta -->
+    <div style="margin-bottom: 20px;">
+        <label>Porcentagem da Gorjeta (%):</label><br>
+        <input type="number" id="porcentagem-gorjeta" placeholder="Ex: 10" style="padding: 8px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; width: 200px;">
+    </div>
+
+    <!-- Botão de Calcular -->
+    <button onclick="calcularTotal()" style="padding: 12px 24px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; font-weight: bold;">
+        Calcular Gorjeta
+    </button>
+
+    <!-- Onde o resultado vai aparecer -->
+    <h2 id="resultado-gorjeta" style="margin-top: 30px; color: #28a745;"></h2>
+    <h2 id="resultado-total" style="color: #007bff;"></h2>
+
+    <script>
+        function calcularTotal() {
+            // ----- SEU DESAFIO DE PROGRAMAÇÃO COMEÇA AQUI -----
+            // 1. Pegamos o valor da conta e da porcentagem convertendo para número
+    let conta = Number(document.getElementById("valor-conta").value);
+    let porcentagem = Number(document.getElementById("porcentagem-gorjeta").value);
+    
+    // 2. Fazemos os cálculos matemáticos
+    let valorGorjeta = (conta * porcentagem) / 100;
+    let valorTotalGeral = conta + valorGorjeta;
+    
+    // 3. Exibimos os resultados na tela
+    document.getElementById("resultado-gorjeta").innerText = "Valor da Gorjeta: R$ " + valorGorjeta.toFixed(2);
+    document.getElementById("resultado-total").innerText = "Total Geral: R$ " + valorTotalGeral.toFixed(2);
+            // 1. Pegue o valor digitado no campo 'valor-conta'
+            
+            // 2. Pegue o valor digitado no campo 'porcentagem-gorjeta'
+            
+            // 3. Faça a conta da gorjeta. Fórmula: (Valor da Conta * Porcentagem) / 100
+            
+            // 4. Faça a conta do total geral. Fórmula: Valor da Conta + Valor da Gorjeta
+            
+            // 5. Exiba os resultados na tela alterando o texto dos elementos 'resultado-gorjeta' e 'resultado-total'
+
+            // ----- SEU DESAFIO TERMINA AQUI -----
+        }
+    </script>
+
+</body>
+</html>
